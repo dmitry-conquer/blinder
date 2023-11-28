@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="uk">
+  @@include('components/head.html', { 'title': 'Головна' })
+  <body>
+    <div class="overflow-hidden relative">
+      @@include('components/header.html', { })
+      <main>
+        <section class="bg-cover pt-[10.3rem] bg-no-repeat bg-center min-h-screen flex flex-col" style="background-image: url('./img/main-page/bg_static.webp')">
+          <div class="mt-auto container">
+            <h1 class="text-[56px] sm:text-8xl 2xl:text-9xl leading-[1] mb-16 sm:mb-20 2xl:mb-36 ">Створюємо приватні та громадські інтер’єри</h1>
+            <div class="flex flex-col items-center sm:flex-row gap-4 sm:gap-[1.87rem]">
+              <a href="#" class="hover:bg-light hover:text-black transition-colors uppercase p-6 2xl:p-8 bg-transparent border border-light text-base md:text-xl w-full max-w-[27rem] text-center leading-none">швидка консультація</a>
+              <a href="#" class="hover:bg-black  hover:text-light transition-colors uppercase p-6 2xl:p-8 text-black bg-light text-base md:text-xl w-full max-w-[27rem] text-center leading-none">Заповнити форму</a>
+            </div>
+            <p class="text-lg sm:text-2xl 2xl:text-3xl uppercase text-shadow leading-none max-w-[51.rem] w-full ml-auto">Надаємо повний спектр послуг: від розробки дизайн-проєкту до супроводу будівельних робіт і комплектації</p>
+          </div>
+        </section>
+      </main>
+
+      @@include('components/to-top-button.html', { })
+      @@include('components/footer.html', { })
+    </div>
+    <script type="module" src="./js/app.min.js"></script>
+  </body>
+</html>
