@@ -1,7 +1,7 @@
 /* Import lib styles  */
-// @import '../../node_modules/swiper/swiper.scss';
-// @import '../../node_modules/swiper/modules/navigation/navigation.scss';
-// @import '../../node_modules/swiper/modules/autoplay/autoplay.scss';
+@import '../../node_modules/swiper/swiper.scss';
+@import '../../node_modules/swiper/modules/navigation/navigation.scss';
+@import '../../node_modules/swiper/modules/autoplay/autoplay.scss';
 // @import '../../node_modules/swiper/modules/pagination/pagination.scss';
 // @import '../../node_modules/swiper/modules/scrollbar/scrollbar.scss';
 
@@ -41,6 +41,11 @@
     &.is-visible {
       @apply visible opacity-100 pointer-events-auto;
     }
+  }
+
+  //slider
+  .swiper-button-disabled {
+    @apply opacity-0 invisible;
   }
 }
 
