@@ -1,7 +1,7 @@
 /* Import lib styles  */
-@import '../../node_modules/swiper/swiper.scss';
-@import '../../node_modules/swiper/modules/navigation/navigation.scss';
-@import '../../node_modules/swiper/modules/autoplay/autoplay.scss';
+@import "../../node_modules/swiper/swiper.scss";
+@import "../../node_modules/swiper/modules/navigation/navigation.scss";
+@import "../../node_modules/swiper/modules/autoplay/autoplay.scss";
 // @import '../../node_modules/swiper/modules/pagination/pagination.scss';
 // @import '../../node_modules/swiper/modules/scrollbar/scrollbar.scss';
 
@@ -53,5 +53,26 @@
 @layer utilities {
   .text-shadow {
     text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.75);
+  }
+  .image-shadow {
+    filter: drop-shadow(0px 0px 80px rgba(0, 0, 0, 0.5));
+  }
+  .font-outline {
+    -webkit-text-stroke: 1px #eeeaea;
+    -webkit-text-fill-color: transparent;
+  }
+  .right-top-cut {
+    position: relative;
+    &::after {
+      content: "";
+      border-left: 1px solid #3F4451;
+      width: 30px;
+      height: 47px;
+      position: absolute;
+      transform: rotate(311deg);
+      right: -8px;
+      top: -20px;
+      background-color: #161519;
+    }
   }
 }
