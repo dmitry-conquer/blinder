@@ -8,21 +8,23 @@ gsap.registerPlugin(ScrollTrigger);
   Lenis
 */
 
-const lenis = new Lenis({
-  duration: 2,
-});
-lenis.on("scroll", ScrollTrigger.update);
+if (!ScrollTrigger.isTouch) {
+  const lenis = new Lenis({
+    duration: 1.5,
+  });
+  lenis.on("scroll", ScrollTrigger.update);
 
-function raf(time) {
-  lenis.raf(time);
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
   requestAnimationFrame(raf);
-}
-requestAnimationFrame(raf);
 
-gsap.ticker.add(time => {
-  lenis.raf(time * 1000);
-});
-gsap.ticker.lagSmoothing(0);
+  gsap.ticker.add(time => {
+    lenis.raf(time * 1000);
+  });
+  gsap.ticker.lagSmoothing(0);
+}
 
 /*
   GSAP | ScrollTrigger
