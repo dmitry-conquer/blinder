@@ -20,6 +20,7 @@
 // import MicroModal from 'micromodal';
 import "./modules/topTopTrigger.js";
 import "./modules/header.js";
+import "./modules/spoilers.js";
 import "./modules/sliders.js";
 
 function app() {

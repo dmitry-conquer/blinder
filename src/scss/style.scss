@@ -47,6 +47,23 @@
   .swiper-button-disabled {
     @apply opacity-0 invisible;
   }
+
+  // spoilers
+  .horisontal-spoiler {
+    &.active-horisontal-spoiler {
+      @apply basis-[80%];
+      & > ul {
+        @apply flex;
+      }
+      h3,
+      svg {
+        @apply opacity-30;
+      }
+      svg {
+        @apply rotate-90;
+      }
+    }
+  }
 }
 
 // ===============================================================================
@@ -65,7 +82,7 @@
     position: relative;
     &::after {
       content: "";
-      border-left: 1px solid #3F4451;
+      border-left: 1px solid #3f4451;
       width: 30px;
       height: 47px;
       position: absolute;
