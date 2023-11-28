@@ -6,15 +6,15 @@
       @@include('components/header.html', { })
       <main>
         <!-- hero section -->
-        <section class="bg-cover pt-[10.3rem] bg-no-repeat bg-center min-h-screen flex flex-col" style="background-image: url('./img/main-page/bg_static.webp')">
+        <section class="bg-cover pt-[10.3rem]  min-h-screen flex flex-col relative">
+            <img src="./img/main-page/bg_static.webp" alt="" class="main-bg-gsap will-change-auto absolute left-0 top-0 w-full h-full object-cover">
           <div class="mt-auto container">
             <h1 class="main-title-gsap will-change-auto text-[56px] sm:text-8xl 2xl:text-9xl leading-[1] mb-16 sm:mb-20 2xl:mb-36">Створюємо приватні та громадські інтер’єри</h1>
             <div class="main-btns-gsap will-change-auto flex flex-col items-center sm:flex-row gap-4 sm:gap-[1.87rem]">
-              <a
-                href="#"
+              <button type="button"
+              data-micromodal-trigger="fast-consult"
                 class=" hover:bg-light hover:text-black transition-colors uppercase p-6 2xl:p-8 bg-transparent border border-light text-base md:text-xl w-full max-w-[27rem] text-center leading-none"
-                >швидка консультація</a
-              >
+                >швидка консультація</button>
               <a
                 href="#"
                 class=" hover:bg-black hover:text-light transition-colors uppercase p-6 2xl:p-8 text-black bg-light text-base md:text-xl w-full max-w-[27rem] text-center leading-none"
@@ -173,16 +173,15 @@
           </div>
 
           <div class="relative max-md:hidden">
-            <img src="./img/main-page/image_5.webp" alt="image_5" class="guarantee-image-small-gsap will-change-auto relative z-10" />
-            <!-- absolute top-0 left-0 -->
-            <img src="./img/main-page/image_6.webp" alt="image_6" class="guarantee-image-big-gsap will-change-auto absolute top-[8rem] right-0" />
+            <img src="./img/main-page/image_5.webp" alt="image_5" class="guarantee-image-small-gsap will-change-auto relative z-10 w-[50%]" />
+            <img src="./img/main-page/image_6.webp" alt="image_6" class="guarantee-image-big-gsap will-change-auto absolute top-[8rem] right-0 w-[75%]" />
           </div>
         </section>
 
         <!-- steps section -->
         <section class="bg-dark pt-20 pb-[3.12em]">
           <div class="container">
-            <h2 class="steps-title-gsap will-change-auto text-4xl sm:text-6xl lg:text-7xl 2xl:text-8xl mb-[6.26rem]">Послідовність <br> роботи зі мною</h2>
+            <h2 class="steps-title-gsap will-change-auto text-4xl sm:text-6xl lg:text-7xl 2xl:text-8xl  mb-12 xl:mb-[6.26rem]">Послідовність <br> роботи зі мною</h2>
             <div class="flex xl:h-[37.5rem] flex-col xl:flex-row transition-all mb-14 sm:mb-20 md:mb-32 xl:mb-[12.5rem]">
               <div
                 class="basis-[11.111%] horisontal-spoiler hover:bg-muted/80 cursor-pointer group p-4 sm:p-7 grow h-full bg-muted border-b xl:border-r flex gap-4 sm:gap-12 2xl:gap-20 flex-col lg:flex-row lg:items-end border-[#3F4451]">
@@ -336,7 +335,9 @@
           </div>
         </section>
       </main>
-      @@include('components/to-top-button.html', { }) @@include('components/footer.html', { })
+      @@include('components/to-top-button.html', { }) 
+      @@include('components/modals.html', { })
+      @@include('components/footer.html', { })
     </div>
     <script type="module" src="./js/app.min.js"></script>
   </body>

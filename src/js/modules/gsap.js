@@ -28,6 +28,15 @@ gsap.ticker.lagSmoothing(0);
   GSAP | ScrollTrigger
 */
 
+// main-bg-gsap
+
+const initialAnimationMainBg = gsap.timeline();
+initialAnimationMainBg.from(".main-bg-gsap", {
+  scale: 1.8,
+  rotate: -15,
+  duration: 2,
+});
+
 // main-title-hero
 
 const initialAnimationMainTitle = gsap.timeline();
@@ -37,20 +46,19 @@ initialAnimationMainTitle.from(".main-title-gsap", {
   duration: 1,
 });
 
-// const mainTitle = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: ".main-title-gsap",
-//     start: "top 30%",
-//     end: "bottom top",
-//     scrub: true,
-//     markers: false,
-//   },
-// });
+const mainTitle = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".main-title-gsap",
+    start: "top 30%",
+    end: "bottom top",
+    scrub: true,
+    markers: false,
+  },
+});
 
-// mainTitle.to(".main-title-gsap", {
-//   y: -100,
-//   opacity: 0,
-// });
+mainTitle.to(".main-title-gsap", {
+  y: -100,
+});
 
 // main-btns-hero
 const initialAnimationMainBtns = gsap.timeline();
@@ -61,19 +69,18 @@ initialAnimationMainBtns.from(".main-btns-gsap", {
   delay: 0.3,
 });
 
-// const mainBtns = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: ".main-btns-gsap",
-//     start: "top 80%",
-//     end: "bottom top",
-//     scrub: true,
-//   },
-// });
+const mainBtns = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".main-btns-gsap",
+    start: "top 80%",
+    end: "bottom top",
+    scrub: true,
+  },
+});
 
-// mainBtns.to(".main-btns-gsap", {
-//   y: -100,
-//   opacity: 0,
-// });
+mainBtns.to(".main-btns-gsap", {
+  y: -100,
+});
 
 // main-text-hero
 
@@ -81,7 +88,7 @@ const initialAnimationMainTextHero = gsap.timeline();
 initialAnimationMainTextHero.fromTo(
   ".main-text-gsap",
   {
-    y: 220,
+    y: 100,
     opacity: 0,
     duration: 1,
     delay: 0.3,
@@ -92,22 +99,27 @@ initialAnimationMainTextHero.fromTo(
   },
 );
 
-// const mainTextHero = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: ".main-text-gsap",
-//     start: "top 80%",
-//     end: "bottom top",
-//     scrub: true,
-//     markers: false,
-//   },
-// });
+const mainTextHero = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".main-text-gsap",
+    start: "top bottom",
+    end: "bottom top",
+    scrub: true,
+    markers: false,
+  },
+});
 
-// mainTextHero.to(".main-text-gsap", {
-//   y: -100,
-//   opacity: 0,
-//   duration: 1,
-//   delay: 0.3,
-// });
+mainTextHero.fromTo(
+  ".main-text-gsap",
+  {
+    y: 50,
+  },
+  {
+    y: -50,
+    duration: 1,
+    delay: 0.3,
+  },
+);
 
 // objects-main-title-gsap
 
@@ -128,7 +140,7 @@ objectsMainTitle.fromTo(
   },
   {
     x: 0,
-    y: -100,
+    y: -50,
   },
 );
 
@@ -293,18 +305,17 @@ guaranteeItem.fromTo(
   {
     y: 0,
     stagger: 0.3,
-    delay: 0.2
+    delay: 0.2,
   },
 );
-
 
 // guarantee-title-gsap
 
 const guaranteeTitle = gsap.timeline({
   scrollTrigger: {
     trigger: ".guarantee-title-gsap",
-    start: "top bottom",
-    end: "bottom 90%",
+    start: "top 80%",
+    end: "bottom center",
     scrub: false,
     markers: false,
   },
@@ -317,7 +328,6 @@ guaranteeTitle.fromTo(
     rotate: 10,
   },
   {
-    y: -100,
     rotate: 0,
     xPercent: 0,
   },
@@ -345,7 +355,6 @@ guaranteeImageBig.fromTo(
   },
 );
 
-
 // guarantee-image-small-gsap
 
 const guaranteeImageSmall = gsap.timeline({
@@ -367,8 +376,6 @@ guaranteeImageSmall.fromTo(
     y: -50,
   },
 );
-
-
 
 // steps-title-gsap
 
@@ -394,7 +401,6 @@ stepsTitle.fromTo(
   },
 );
 
-
 // steps-text-gsap
 
 const stepsText = gsap.timeline({
@@ -415,6 +421,6 @@ stepsText.fromTo(
   {
     y: 0,
     stagger: 0.3,
-    delay: 0.2
+    delay: 0.2,
   },
 );
