@@ -20,12 +20,5 @@ function scroll() {
 }
 scroll();
 
-function toTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-}
-
-toTopButton.addEventListener("click", toTop);
 window.addEventListener("scroll", scroll);
+

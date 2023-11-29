@@ -2,6 +2,7 @@
 @import "../../node_modules/swiper/swiper.scss";
 @import "../../node_modules/swiper/modules/navigation/navigation.scss";
 @import "../../node_modules/swiper/modules/autoplay/autoplay.scss";
+@import '../../node_modules/aos/src/sass/aos.scss';
 
 @import "fonts";
 
@@ -18,8 +19,8 @@
 
 @layer components {
   // header
-  #main-header{
-  @apply transition-all duration-200;
+  #main-header {
+    @apply transition-all duration-200;
     &.is-active {
       @apply backdrop-blur-md bg-dark/60;
     }
@@ -73,6 +74,38 @@
   .modal {
     &.is-open {
       @apply opacity-100 visible;
+    }
+  }
+
+  // active-classes
+  .active-item {
+    span {
+      @apply text-white;
+    }
+    a {
+      @apply text-white underline;
+    }
+  }
+
+  // pagination
+  .pagination {
+    a {
+      &.active-page {
+        @apply text-white;
+      }
+    }
+  }
+
+  // porfolios views
+  #portfolio-list-content, #portfolio-photos-content {
+    @apply hidden;
+    &.active-view {
+      @apply block;
+    }
+  }
+  #view-as-list, #view-as-photo {
+    &.active-view-tigger {
+      @apply text-white underline;
     }
   }
 }

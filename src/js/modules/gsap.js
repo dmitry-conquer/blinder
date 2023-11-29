@@ -4,9 +4,22 @@ import Lenis from "@studio-freight/lenis";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const toTopButton = document.getElementById("to-top-btn");
+
 /*
   Lenis
 */
+
+if (ScrollTrigger.isTouch) {
+  function toTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
+
+  toTopButton.addEventListener("click", toTop);
+}
 
 if (!ScrollTrigger.isTouch) {
   const lenis = new Lenis({
@@ -20,10 +33,15 @@ if (!ScrollTrigger.isTouch) {
   }
   requestAnimationFrame(raf);
 
-  gsap.ticker.add(time => {
-    lenis.raf(time * 1000);
+  toTopButton.addEventListener("click", () => {
+    lenis.scrollTo("top", {
+      duration: 3,
+    });
   });
-  gsap.ticker.lagSmoothing(0);
+  // gsap.ticker.add(time => {
+  //   lenis.raf(time * 1000);
+  // });
+  // gsap.ticker.lagSmoothing(0);
 }
 
 /*
@@ -426,3 +444,4 @@ stepsText.fromTo(
     delay: 0.2,
   },
 );
+
