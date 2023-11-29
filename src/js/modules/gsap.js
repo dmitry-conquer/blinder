@@ -422,7 +422,6 @@ stepsTitle.fromTo(
 );
 
 // steps-text-gsap
-
 const stepsText = gsap.timeline({
   scrollTrigger: {
     trigger: ".steps-text-gsap",
@@ -445,3 +444,123 @@ stepsText.fromTo(
   },
 );
 
+/*
+  single page
+*/
+
+const singleToTopEls = gsap.utils.toArray(".single-to-top-gsap");
+const singleToBottomEls = gsap.utils.toArray(".single-to-bottom-gsap");
+const leftSlide = gsap.utils.toArray(".left-slide-gsap");
+const rightSlide = gsap.utils.toArray(".right-slide-gsap");
+const zoomInEls = gsap.utils.toArray(".zoom-in-gsap");
+const zoomOutEls = gsap.utils.toArray(".zoom-out-gsap");
+
+singleToTopEls.forEach(el => {
+  gsap.fromTo(
+    el,
+    {
+      y: 60,
+    },
+    {
+      y: 0,
+      scrollTrigger: {
+        trigger: el,
+        start: "top bottom",
+        end: "bottom center",
+        scrub: true,
+      },
+    },
+  );
+});
+
+singleToBottomEls.forEach(el => {
+  gsap.fromTo(
+    el,
+    {
+      y: 0,
+    },
+    {
+      y: 60,
+      scrollTrigger: {
+        trigger: el,
+        start: "top bottom",
+        end: "bottom center",
+        scrub: true,
+      },
+    },
+  );
+});
+
+// single-zoom-gsap
+
+zoomOutEls.forEach(el => {
+  gsap.fromTo(
+    el,
+    {
+      scale: 1.4,
+    },
+    {
+      scale: 1,
+      scrollTrigger: {
+        trigger: el,
+        start: "top bottom",
+        end: "bottom center",
+        scrub: true,
+      },
+    },
+  );
+});
+
+zoomInEls.forEach(el => {
+  gsap.fromTo(
+    el,
+    {
+      scale: 1,
+    },
+    {
+      scale: 1.4,
+      scrollTrigger: {
+        trigger: el,
+        start: "top bottom",
+        end: "bottom center",
+        scrub: true,
+      },
+    },
+  );
+});
+
+leftSlide.forEach(el => {
+  gsap.fromTo(
+    el,
+    {
+      x: -150,
+    },
+    {
+      x: 0,
+      scrollTrigger: {
+        trigger: el,
+        start: "top bottom",
+        end: "bottom center",
+        scrub: true,
+      },
+    },
+  );
+});
+
+rightSlide.forEach(el => {
+  gsap.fromTo(
+    el,
+    {
+      x: 150,
+    },
+    {
+      x: 0,
+      scrollTrigger: {
+        trigger: el,
+        start: "top bottom",
+        end: "bottom center",
+        scrub: true,
+      },
+    },
+  );
+});

@@ -2,7 +2,7 @@
 @import "../../node_modules/swiper/swiper.scss";
 @import "../../node_modules/swiper/modules/navigation/navigation.scss";
 @import "../../node_modules/swiper/modules/autoplay/autoplay.scss";
-@import '../../node_modules/aos/src/sass/aos.scss';
+@import "../../node_modules/aos/src/sass/aos.scss";
 
 @import "fonts";
 
@@ -97,13 +97,15 @@
   }
 
   // porfolios views
-  #portfolio-list-content, #portfolio-photos-content {
+  #portfolio-list-content,
+  #portfolio-photos-content {
     @apply hidden;
     &.active-view {
       @apply block;
     }
   }
-  #view-as-list, #view-as-photo {
+  #view-as-list,
+  #view-as-photo {
     &.active-view-tigger {
       @apply text-white underline;
     }
@@ -135,5 +137,8 @@
       top: -20px;
       background-color: #161519;
     }
+  }
+  .dark-gradient {
+    background: linear-gradient(92deg,#000 12.54%,hsla(0,0%,71%,0) 90.4%);
   }
 }
