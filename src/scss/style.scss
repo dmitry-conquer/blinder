@@ -70,6 +70,15 @@
     }
   }
 
+  .active-spoiler {
+    .cross-vertical {
+      @apply rotate-0;
+    }
+    .cross-horizontal {
+      @apply opacity-0;
+    }
+  }
+
   // modal
   .modal {
     &.is-open {
@@ -139,6 +148,6 @@
     }
   }
   .dark-gradient {
-    background: linear-gradient(92deg,#000 12.54%,hsla(0,0%,71%,0) 90.4%);
+    background: linear-gradient(92deg, #000 12.54%, hsla(0, 0%, 71%, 0) 90.4%);
   }
 }
