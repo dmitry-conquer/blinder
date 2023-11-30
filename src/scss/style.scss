@@ -119,6 +119,13 @@
       @apply text-white underline;
     }
   }
+
+  // buttons
+  button {
+    &.option-is-checked {
+      @apply bg-light text-dark;
+    }
+  }
 }
 
 // ===============================================================================

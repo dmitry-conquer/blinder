@@ -22,6 +22,7 @@ import "./modules/spoilers.js";
 import "./modules/portfolio-view.js";
 import "./modules/sliders.js";
 import "./modules/gsap.js";
+import "./modules/quiz.js";
 
 function app() {
   MicroModal.init({
