@@ -564,3 +564,73 @@ rightSlide.forEach(el => {
     },
   );
 });
+
+// info-buildings-gsap
+
+// info-buildings-gsap
+
+gsap.fromTo(
+  ".info-buildings-gsap",
+  {
+    y: 50,
+  },
+  {
+    y: 0,
+    stagger: 0.3,
+    delay: 0.2,
+    scrollTrigger: {
+      trigger: ".info-buildings-gsap",
+      start: "top bottom",
+      end: "bottom center",
+      scrub: true,
+    },
+  },
+);
+
+gsap.fromTo(
+  ".info-gsap-logo",
+  {
+    y: 300,
+    x: -300,
+  },
+  {
+    y: 0,
+    x: 0,
+
+  },
+);
+
+gsap.fromTo(
+  ".info-gsap-text",
+  {
+    y: 700,
+    x: -700,
+  },
+  {
+    delay: 0.3,
+    y: 0,
+    x: 0,
+  },
+);
+
+gsap.fromTo(
+  ".info-gsap-image-bg",
+  {
+    x: 700,
+  },
+  {
+    x: 0,
+    delay: 0.3,
+  },
+);
+
+gsap.fromTo(
+  ".info-gsap-image-main",
+  {
+    x: 700,
+  },
+  {
+   
+    x: 0,
+  },
+);
