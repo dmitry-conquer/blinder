@@ -1,25 +1,17 @@
-import Swiper, { Navigation, Pagination, Autoplay, Parallax } from "swiper";
+import Swiper, { Navigation, Autoplay } from "swiper";
 
 if (document.querySelector(".main-page-slider")) {
   new Swiper(".main-page-slider", {
-    modules: [Navigation, Pagination, Autoplay, Parallax],
+    modules: [Navigation, Autoplay],
     wrapperClass: "main-page-slider-wrap",
     slideClass: "main-page-slider-slide",
     slidesPerView: "auto",
     spaceBetween: 150,
     speed: 1200,
-    //  loop: true,
-    //  loopedSlides: 2,
     centeredSlides: false,
-    // parallax: true,
-    // watchOverflow: false,
-    //autoHeight: true,
-    // watchSlidesProgress: true,
 
-    // Effects
-    //effect: 'fade',
     autoplay: {
-      delay: 3000,
+      delay: 5000,
       disableOnInteraction: false,
       pauseOnMouseEnter: true,
     },
@@ -66,14 +58,7 @@ fullScreenSliders.forEach(slider => {
       spaceBetween: 30,
       speed: 1200,
       loop: true,
-      //  loopedSlides: 2,
-      // centeredSlides: false,
-      // watchOverflow: false,
-      //autoHeight: true,
-      // watchSlidesProgress: true,
 
-      // Effects
-      //effect: 'fade',
       autoplay: {
         delay: 3000,
         disableOnInteraction: false,
@@ -103,9 +88,9 @@ fullScreenSliders.forEach(slider => {
           spaceBetween: 30,
         },
         1200: {
-         slidesPerView: 4,
-         spaceBetween: 30,
-       },
+          slidesPerView: 4,
+          spaceBetween: 30,
+        },
       },
     });
   }

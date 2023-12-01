@@ -586,7 +586,7 @@
               <h2 class="text-4xl sm:text-5xl lg:text-6xl 2xl:text-8xl mb-4 lg:mb-auto">Не знайшли відповідь на своє запитання?</h2>
               <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl uppercase">я проконсультую вас безкоштовно</p>
             </div>
-            <form action="#">
+            <form action="#" id="faq-form">
               <div class="space-y-10 sm:space-y-[3.13rem] mb-10 sm:mb-14 lg:mb-20">
                 <input
                   type="text"
@@ -609,7 +609,9 @@
           </div>
         </section>
       </main>
-      @@include('components/to-top-button.html', { }) @@include('components/footer.html', { })
+      @@include('components/to-top-button.html', { }) 
+      @@include('components/footer.html', { })
+      @@include('components/modal-order-result.html', { })
     </div>
     <script type="module" src="./js/app.min.js"></script>
   </body>

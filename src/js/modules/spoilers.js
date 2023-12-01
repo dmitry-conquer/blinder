@@ -1,6 +1,10 @@
 const horisontalSpoilers = document.querySelectorAll(".horisontal-spoiler");
 const spoilerTriggers = document.querySelectorAll(".spoiler-trigger");
 
+/*
+  horisontal spoilers
+*/
+
 horisontalSpoilers.forEach(el => {
   el.addEventListener("click", e => {
     horisontalSpoilers.forEach(iel => {
@@ -9,6 +13,10 @@ horisontalSpoilers.forEach(el => {
     e.target.closest(".horisontal-spoiler").classList.add("active-horisontal-spoiler");
   });
 });
+
+/*
+  default spoiler
+*/
 
 spoilerTriggers.forEach(trigger => {
   if (trigger) {
