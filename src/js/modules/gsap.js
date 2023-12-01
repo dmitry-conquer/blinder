@@ -12,14 +12,15 @@ window.addEventListener("DOMContentLoaded", event => {
 */
 
   if (ScrollTrigger.isTouch) {
-    function toTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
+    if (toTopButton) {
+      function toTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+      toTopButton.addEventListener("click", toTop);
     }
-
-    toTopButton.addEventListener("click", toTop);
   }
 
   if (!ScrollTrigger.isTouch) {
@@ -34,15 +35,13 @@ window.addEventListener("DOMContentLoaded", event => {
     }
     requestAnimationFrame(raf);
 
-    toTopButton.addEventListener("click", () => {
-      lenis.scrollTo("top", {
-        duration: 3,
+    if (toTopButton) {
+      toTopButton.addEventListener("click", () => {
+        lenis.scrollTo("top", {
+          duration: 3,
+        });
       });
-    });
-    // gsap.ticker.add(time => {
-    //   lenis.raf(time * 1000);
-    // });
-    // gsap.ticker.lagSmoothing(0);
+    }
   }
 
   /*
@@ -50,7 +49,6 @@ window.addEventListener("DOMContentLoaded", event => {
 */
 
   // main-bg-gsap
-
   const initialAnimationMainBg = gsap.timeline();
   initialAnimationMainBg.from(".main-bg-gsap", {
     scale: 1.8,
