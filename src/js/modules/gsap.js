@@ -82,7 +82,7 @@ window.addEventListener("DOMContentLoaded", event => {
   // main-btns-hero
   const initialAnimationMainBtns = gsap.timeline();
   initialAnimationMainBtns.from(".main-btns-gsap", {
-    y: 100,
+    y: 0,
     opacity: 0,
     duration: 1,
     delay: 0.3,
@@ -107,13 +107,13 @@ window.addEventListener("DOMContentLoaded", event => {
   initialAnimationMainTextHero.fromTo(
     ".main-text-gsap",
     {
-      y: 100,
+      y: 300,
       opacity: 0,
       duration: 1,
       delay: 0.3,
     },
     {
-      y: 50,
+      y: 150,
       opacity: 1,
     },
   );

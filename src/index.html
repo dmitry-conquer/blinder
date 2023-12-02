@@ -6,22 +6,23 @@
       @@include('components/header.html', { })
       <main>
         <!-- hero section -->
-        <section class="bg-cover pt-[10.3rem]  min-h-screen flex flex-col relative">
+        <section class="pt-[10.3rem]  sm:min-h-screen flex flex-col relative">
             <img src="./img/main-page/bg_static.webp" alt="" class="main-bg-gsap will-change-auto absolute left-0 top-0 w-full h-full object-cover">
           <div class="mt-auto container">
-            <h1 class="main-title-gsap will-change-auto text-[56px] sm:text-8xl 2xl:text-9xl leading-[1] mb-16 sm:mb-20 2xl:mb-36">Створюємо приватні та громадські інтер’єри</h1>
-            <div class="main-btns-gsap will-change-auto flex flex-col items-center sm:flex-row gap-4 sm:gap-[1.87rem]">
-              <button type="button"
+            <h1 class="main-title-gsap will-change-auto text-[50px] sm:text-8xl 2xl:text-9xl leading-[1] mb-16 sm:mb-20 2xl:mb-36">Створюємо приватні та громадські інтер’єри</h1>
+            <div class=" will-change-auto flex flex-col items-center sm:flex-row  gap-4 sm:gap-[1.87rem]">
+              <button data-aos="fade-up" type="button"
               data-micromodal-trigger="fast-consult"
                 class=" hover:bg-light hover:text-black transition-colors uppercase p-6 2xl:p-8 bg-transparent border border-light text-base md:text-xl w-full max-w-[27rem] text-center leading-none"
                 >швидка консультація</button>
               <a
+              data-aos="fade-up" data-aos-delay="150"
                 href="feedback.html"
                 class=" hover:bg-black hover:text-light transition-colors uppercase p-6 2xl:p-8 text-black bg-light text-base md:text-xl w-full max-w-[27rem] text-center leading-none"
                 >Заповнити форму</a
               >
             </div>
-            <p class="main-text-gsap will-change-auto text-lg sm:text-2xl 2xl:text-3xl uppercase text-shadow leading-none max-w-[51rem] w-full ml-auto">
+            <p data-aos="fade-up" class="text-lg sm:text-2xl 2xl:text-3xl uppercase relative top-12 text-shadow leading-none max-w-[51rem] w-full ml-auto">
               Надаємо повний спектр послуг: від розробки дизайн-проєкту до супроводу будівельних робіт і комплектації
             </p>
           </div>
@@ -96,7 +97,7 @@
             <img src="./img/main-page/image_4.webp" alt="image_4" class="principle-image-bottom-gsap image-shadow absolute top-0 left-1/3" />
           </div>
 
-          <div class="principle-bottom-content-gsap container flex items-start flex-col sm:flex-row max-xl:justify-between gap-10 xl:gap-[20rem] 2xl:gap-[36rem] relative z-10">
+          <div class="principle-bottom-content-gsap container flex items-start flex-col sm:flex-row max-xl:justify-between gap-20 xl:gap-[20rem] 2xl:gap-[36rem] relative z-10">
             <h3 class="font-outline font-roboto text-transparent text-6xl md:text-8xl">
               10 <br />
               років <br />
